@@ -1,0 +1,26 @@
+<div name="Error" class="alert alert-danger text-center" role="alert" *ngIf="Error">
+    <p>{{Error}}</p>
+    <button type="button" class="btn btn-danger" (click)="HideAlert()">Ok</button>
+</div>
+<div name="Communication" class="alert alert-success text-center" role="alert" *ngIf="Communication">
+    <p>{{Communication}}</p>
+    <button type="button" class="btn btn-success" (click)="HideAlert()">Ok</button>
+</div>
+<form>
+    <div>
+        <h5 class="text-muted text-center">Please notes your problem</h5>
+    </div>
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input type="text" class="form-control" id="Title" name="Title" aria-describedby="TitleHelp" placeholder="Enter title" [(ngModel)]="Application.title">
+        <small id="TitleHelp" class="form-text text-muted">name of your problem</small>
+    </div>
+    <div class="form-group">
+        <label for="Content">Note your problem</label>
+        <textarea class="form-control" id="Content" name="Content" aria-describedby="ContentHelp" rows="3" [(ngModel)]="Application.content"></textarea>
+        <small id="ContentHelp" class="form-text text-muted">describe your problem in detail</small>
+    </div>
+    <div class="form-group">
+        <input type="button" value="Send application" (click)="submit()">
+    </div>
+</form>

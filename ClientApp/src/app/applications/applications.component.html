@@ -1,0 +1,24 @@
+<div class="table-container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Number</th>
+                <th scope="col">State</th>
+                <th scope="col">Created</th>
+                <th scope="col">Title</th>
+                <th scope="col">Date created</th>
+                <th scope="col">Date realized</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of Applications">
+                <th scope="row"><a style="cursor: pointer;" (click)="openApplication(item)">{{item.sid}}</a></th>
+                <td>{{item.sstate}}</td>
+                <td>{{item.usrCreateName}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.dateCreate}}</td>
+                <td>{{item.dateRealize}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

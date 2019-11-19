@@ -1,0 +1,27 @@
+<div class="alert alert-danger text-center" role="alert" *ngIf="Error">
+    <p>{{Error}}</p>
+    <button type="button" class="btn btn-danger" (click)="HideError()">Ok</button>
+</div>
+<div class="wrapper">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="first">
+        <h6>ERP log-in</h6>
+      </div>
+  
+      <!-- Login Form -->
+      <form>
+        <input type="text" id="login" name="login" placeholder="login" [(ngModel)]="LoginData.login">
+        <input type="password" id="password" name="password" placeholder="password" [(ngModel)]="LoginData.password">
+        <input type="submit" value="Log In" (click)="submit()">
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+  
+    </div>
+</div>

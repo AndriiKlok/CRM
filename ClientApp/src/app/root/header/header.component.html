@@ -1,0 +1,19 @@
+<div *ngIf="Auth.isAuthenticated()">
+    <nav class="navbar navbar-expand-md navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="cursor: pointer;" (click)="Home()">Home</a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a *ngIf="Type === 102" class="nav-item nav-link btn btn-primary" style="cursor: pointer;" (click)="NewApplication()" >New application</a>
+                    <a *ngIf="Type === 102" class="nav-item nav-link" style="cursor: pointer;" (click)="Application()" >Applications</a>
+                    <a *ngIf="Type !== 102" class="nav-item nav-link" style="cursor: pointer;" >Tasks</a>
+                    <a *ngIf="Type === 100" class="nav-item nav-link" style="cursor: pointer;" >Users</a>
+                </div>
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link" style="cursor: pointer;" (click)="Logout()">Log-out</a>
+                </div>
+            </div>
+        </div>    
+    </nav>
+</div>
+
